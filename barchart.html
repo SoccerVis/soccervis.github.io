@@ -5,7 +5,7 @@
 <script src="src/d3.v4.js"></script>
 
 <!-- Create a div where the graph will take place -->
-<button onclick="window.location.href='index.html'" type="button">树图</button>
+<button onclick="window.location.href='voronoitreemaptry27_RankingChinese.html'" type="button">树图</button>
 <div id="my_dataviz"></div>
 <style>
 
@@ -39,7 +39,7 @@
 
 
     // set the dimensions and margins of the graph
-    var margin = {top: 20, right: 30, bottom: 40, left: 90},
+    var margin = {top: 50, right: 30, bottom: 40, left: 90},
         width = 2200 - margin.left - margin.right,
         height = 2500 - margin.top - margin.bottom;
     
@@ -101,6 +101,24 @@
 
 
         console.log(data)  
+
+        svg.append("g")
+        .append("text")
+        .attr("x", 760)
+    // .attr("x", (width / 40) * 39)
+    .attr("y",-20)
+    .style("text-anchor", "end")
+    .style("font-size","20") //样式对齐
+    .text("得分");
+
+    svg.append("g")
+        .append("text")
+        .attr("x", 1360)
+    // .attr("x", (width / 40) * 39)
+    .attr("y",-20)
+    .style("text-anchor", "end")
+    .style("font-size","20") //样式对齐
+    .text("身价");
 
       //Bars
       svg.selectAll("myRect")
